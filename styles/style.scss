@@ -83,6 +83,7 @@ header {
 	right: 0;
 	left: 0;
 	top: 100%;
+	margin: 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -102,6 +103,7 @@ header {
 	transition: transform 0.5s, -webkit-transform 0.5s;
 	background-color: $main-blue;
 	z-index: 1;
+	list-style-type: none;
 }
 
 .menu__navigation_active {
@@ -111,7 +113,9 @@ header {
 
 .menu__item {
 	padding: 0.5em;
-	color: #fff;
+	a {
+		color: #fff;
+	}
 }
 
 .menu__button {
@@ -239,19 +243,21 @@ header {
 /* MAIN //*/
 
 main {
+	h2 {
+		margin: 1em 0;
+	}
+	p {
+		margin-bottom: 10px;
+	}
 }
 
-.main__heading {
-	margin: 1em 0;
-}
 
-.main__text {
-	margin-bottom: 10px;
-}
 
 @media only screen and (min-width: 760px) {
-	.main__heading {
-		margin-top: 0;
+	main {
+		h2 {
+			margin-top: 0;
+		}
 	}
 }
 /* INFO //*/
@@ -454,7 +460,7 @@ main {
 		        order: 1;
 	}
 
-	.main__text:last-child {
+	p:last-child {
 		margin-bottom: 25px;
 	}
 }
